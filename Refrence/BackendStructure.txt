@@ -9,8 +9,8 @@ src and test folders. in addition to the
     the repository folder reflacts layer 4. it services the service layer and connect the program to the ?Data Storage medium?
 
  the test folder contains the test scripts, these define test cases and are executed by Vitest
-    the test folder is broken into subsfolders, for unit tests, intergration tests
-        unit test folder mirrors the backend archtexture and has 3 subfolders,one for each layer. 
-        intergration test folder is broken up by featue rather then layer, as intergation test ussually span multiple layers.
-            ussally Controller recives request, service performs validation, repository writes to database, and finnally ccorrect response is returned
-            the intergarion test folder here does not have to concern itself with intergration testing the frontend backend connection. just intergarion inside of the backend 
+ the test folder is broken into subsfolders, for unit tests, intergration tests...
+    unit test folder mirrors the backend archtexture and has 3 subfolders,one for each layer. each file in scr should have a corresponsing test file inside test, each test file can have multiple tests, so as to validate all individiual fucntions of a class
+    intergration test folder is broken up by featue rather then layer, as intergation test ussually span multiple layers.
+        ussally Controller recives request, service performs validation, repository writes to database, and finnally ccorrect response is returned
+        the intergarion test folder here does not have to concern itself with testing the frontend backend connection(that ussually falls under system testing). just intergarion inside of the backend 

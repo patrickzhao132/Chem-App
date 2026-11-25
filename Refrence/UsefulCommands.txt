@@ -2,3 +2,14 @@ Command 1.  tree /f > structure.txt
 use in outermost level, it will make or edit a txt file called structure 
 and place in it a text version of all packages and files in the directory.
 
+Command 2. npm test runs 
+runs every test once, unitl q is press in terminal, the test will be rerun each time you edit and then save a file
+Command 3. npm run test:watch 
+ths runs test contiusly, namely whenever a file changes
+Command 4. npm run test:coverage
+runs tests and genrate statistics, namely what percenatte of production code is executed by at least 1 test
+
+command 5. npm run test:integration
+runs only the test scipts inside ...\Chem-App\backend\tests\intergration
+command 6. npm run test:unit
+runs only the test scipts inside ...\Chem-App\backend\tests\unit

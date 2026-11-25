@@ -1,0 +1,9 @@
+running tests
+
+backend
+to run tests on backend 
+
+
+to
+to test fontend-backend-DB conntection
+we would be useing system test stuff, which is not yet implemented

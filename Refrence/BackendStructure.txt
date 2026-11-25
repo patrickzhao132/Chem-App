@@ -1,0 +1,16 @@
+the backend has node_modules folder which can be ignored
+src and test folders. in addition to the
+ start point file of index.ts
+ of importance are the scr and test folder.
+ 
+ scr folder has 3 subfolder reflecting the layer seprration of the project. inside here is where the actual code for the backend resides
+    the controllers folder reflects layer 2. it services the frontend and calls functions from the service layer
+    the service folder reflects layer 3. it services the controller layer, and calls functions from the repository layer.
+    the repository folder reflacts layer 4. it services the service layer and connect the program to the ?Data Storage medium?
+
+ the test folder contains the test scripts, these define test cases and are executed by Vitest
+    the test folder is broken into subsfolders, for unit tests, intergration tests
+        unit test folder mirrors the backend archtexture and has 3 subfolders,one for each layer. 
+        intergration test folder is broken up by featue rather then layer, as intergation test ussually span multiple layers.
+            ussally Controller recives request, service performs validation, repository writes to database, and finnally ccorrect response is returned
+            the intergarion test folder here does not have to concern itself with intergration testing the frontend backend connection. just intergarion inside of the backend 

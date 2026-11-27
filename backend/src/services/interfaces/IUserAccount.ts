@@ -1,6 +1,7 @@
 export interface IUserAccount {
-    id: string;
+    AccountId: string;
     name: string;
     email: string;
     userDataId: string;
+    role: string;
 }

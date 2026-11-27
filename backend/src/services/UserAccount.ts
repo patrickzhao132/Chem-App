@@ -3,9 +3,10 @@ import type { IUserAccount } from "./interfaces/IUserAccount.js";
 //this is ture despite the fact that the IUserAccount interface is defined in a .ts file, because the compiled js file will be in the same directory as the .ts file.
 export class UserAccount implements IUserAccount {
     constructor(
-        public id: string,
+        public AccountId: string,
         public name: string,
         public email: string,
-        public userDataId: string
+        public userDataId: string,
+        public role: string
     ) {}
 }

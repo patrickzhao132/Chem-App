@@ -6,6 +6,7 @@ export interface IClassesDetail {
     description: string;
     InstructorId: string;
     CreatedAt: Date;
+    ClassesDataID: string;
     members: IClassMember[];
     
 }

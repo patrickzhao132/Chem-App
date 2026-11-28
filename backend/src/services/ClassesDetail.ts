@@ -4,85 +4,99 @@ import type { IClassesDetail } from "../interfaces/IClassesDetail.js";
 
 export class ClassesDetail implements IClassesDetail {
 
+    private _classId: string;
+
+    private _name: string;
+
+    private _description: string;
+
+    private _instructorId: string;
+
+    private _createdAt: Date;
+
+    private _members: IClassMember[];
+
+    private _activeJoinCode: IJoinCode | null;
+
+    private _expiredJoinCodes: IJoinCode[];
+
     constructor(
-        public classId: string,
-        public name: string,
-        public description: string,
-        public instructorId: string,
-        public createdAt: Date,
-        public classesDataId: string,
-        public members: IClassMember[],
-        public activeJoinCode: IJoinCode | null,
-        public expiredJoinCodes: IJoinCode[]
-    ) {}
-
-    getClassId(): string {
-        return this.classId;
+        classId: string,
+        name: string,
+        description: string,
+        instructorId: string,
+        createdAt: Date,
+        members: IClassMember[],
+        activeJoinCode: IJoinCode | null,
+        expiredJoinCodes: IJoinCode[]
+    ) {
+        this._classId = classId;
+        this._name = name;
+        this._description = description;
+        this._instructorId = instructorId;
+        this._createdAt = createdAt;
+        this._members = members;
+        this._activeJoinCode = activeJoinCode;
+        this._expiredJoinCodes = expiredJoinCodes;
     }
 
-    setClassId(classId: string): void {
-        this.classId = classId;
+    public get classId(): string {
+        return this._classId;
     }
 
-    getName(): string {
-        return this.name;
+    public set classId(value: string) {
+        this._classId = value;
     }
 
-    setName(name: string): void {
-        this.name = name;
+    public get name(): string {
+        return this._name;
     }
 
-    getDescription(): string {
-        return this.description;
+    public set name(value: string) {
+        this._name = value;
     }
 
-    setDescription(description: string): void {
-        this.description = description;
+    public get description(): string {
+        return this._description;
     }
 
-    getInstructorId(): string {
-        return this.instructorId;
+    public set description(value: string) {
+        this._description = value;
     }
 
-    setInstructorId(instructorId: string): void {
-        this.instructorId = instructorId;
+    public get instructorId(): string {
+        return this._instructorId;
     }
 
-    getCreatedAt(): Date {
-        return this.createdAt;
+    public set instructorId(value: string) {
+        this._instructorId = value;
     }
 
-    getClassesDataId(): string {
-        return this.classesDataId;
+    public get createdAt(): Date {
+        return this._createdAt;
     }
 
-    setClassesDataId(classesDataId: string): void {
-        this.classesDataId = classesDataId;
+    public get members(): IClassMember[] {
+        return this._members;
     }
 
-    getMembers(): IClassMember[] {
-        return this.members;
+    public set members(value: IClassMember[]) {
+        this._members = value;
     }
 
-    setMembers(members: IClassMember[]): void {
-        this.members = members;
+    public get activeJoinCode(): IJoinCode | null {
+        return this._activeJoinCode;
     }
 
-    getActiveJoinCode(): IJoinCode | null {
-        return this.activeJoinCode;
+    public set activeJoinCode(value: IJoinCode | null) {
+        this._activeJoinCode = value;
     }
 
-    setActiveJoinCode(joinCode: IJoinCode | null): void {
-        this.activeJoinCode = joinCode;
+    public get expiredJoinCodes(): IJoinCode[] {
+        return this._expiredJoinCodes;
     }
 
-    getExpiredJoinCodes(): IJoinCode[] {
-        return this.expiredJoinCodes;
-    }
-
-    setExpiredJoinCodes(
-        joinCodes: IJoinCode[]
-    ): void {
-        this.expiredJoinCodes = joinCodes;
+    public set expiredJoinCodes(value: IJoinCode[]) {
+        this._expiredJoinCodes = value;
     }
 }

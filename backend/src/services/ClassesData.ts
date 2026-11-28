@@ -1,4 +1,4 @@
-import type { IClassesData } from "./interfaces/IClassesData.js";
+import type { IClassesData } from "../interfaces/IClassesData.js";
 
 export class ClassesData implements IClassesData {
     constructor(

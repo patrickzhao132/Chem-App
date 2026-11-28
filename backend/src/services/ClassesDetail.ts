@@ -1,5 +1,5 @@
-import type { IClassesDetail } from "./interfaces/IClassesDetail.js";
-import type { IClassMember } from "./interfaces/IClassesMember.js";
+import type { IClassesDetail } from "../interfaces/IClassesDetail.js";
+import type { IClassMember } from "../interfaces/IClassesMember.js";
 
 export class ClassesDetail implements IClassesDetail {
     constructor(

@@ -1,8 +1,8 @@
 import type { IClasses } from "../interfaces/IClasses.js";
-import type { ClassesData } from "./ClassesData.js";
-import type { ClassesDetail } from "./ClassesDetail.js";
-import type { JoinCode } from "./JoinCode.js";
-import type { ClassMember } from "./ClassMember.js";
+import { ClassesData } from "./ClassesData.js";
+import { ClassesDetail } from "./ClassesDetail.js";
+import { JoinCode } from "./JoinCode.js";
+import { ClassMember } from "./ClassesMember.js";
 
 //business logic for classes
 export class Classes implements IClasses {
@@ -10,7 +10,9 @@ export class Classes implements IClasses {
         public ClassesData: ClassesData,
         public ClassesDetail: ClassesDetail
     ) {}
-    generateJoinCode(): JoinCode { }
+    generateJoinCode(): JoinCode {
+        return new JoinCode("code", new Date(), new Date());
+     }
 
     invalidateJoinCode(): void { }
 
@@ -20,5 +22,7 @@ export class Classes implements IClasses {
 
     hasStudent(studentId: string): boolean { }
 
-    isJoinCodeValid(code: string): boolean { }
+    isJoinCodeValid(code: string): boolean { 
+        
+    }
 }

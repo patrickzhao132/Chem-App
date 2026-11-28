@@ -4,11 +4,10 @@ export interface IClassesDetail {
     classId: string;
     name: string;
     description: string;
-    InstructorId: string;
-    CreatedAt: Date;
-    ClassesDataID: string;
+    instructorId: string;
+    createdAt: Date;
     members: IClassMember[];
-    joinCode: IJoinCode;
+    activeJoinCode: IJoinCode | null;
     expiredJoinCodes: IJoinCode[];
     
 }

@@ -3,6 +3,7 @@ import type { IUserData } from "../interfaces/IUserData.js";
 
 export class UserData implements IUserData {
     constructor(
-        public id: string
+        public userDataID: string,//primary key for the user data table
+        public userAccountID: string//Foreign key to the user account table
     ) {}
 }

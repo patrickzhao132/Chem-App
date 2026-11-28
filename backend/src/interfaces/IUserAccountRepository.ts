@@ -1,4 +1,4 @@
-import type { IUserAccount } from "./interfaces/IUserAccount.js";
+import type { IUserAccount } from "./IUserAccount.js";
 
 export interface IUserAccountRepository {
     getByID(
